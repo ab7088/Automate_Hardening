@@ -11,7 +11,7 @@ win22cis_passwordhistorysize: 24
 # 1.1.2
 # win22cis_maximumpasswordage is the maximum password age in days
 # This value should be set to 365 or fewer, but not 0, to be CIS compliant
-win22cis_maximumpasswordage: 365
+win22cis_maximumpasswordage: 42
 
 # 1.1.3
 # win22cis_minimumpasswordage is the minimum password age in days
@@ -21,17 +21,17 @@ win22cis_minimumpasswordage: 1
 # 1.1.4
 # win22cis_minimumpasswordlength is the minimum number of characters needed for a password
 # This value should be set to 14 or more to be CIS compliant
-win22cis_minimumpasswordlength: 14
+win22cis_minimumpasswordlength: 7
 
 # 1.2.1
 # win22cis_lockoutduration is the duration a locked account stays locked in minutes
 # This value should be set to 15 or more to be CIS compliant
-win22cis_lockoutduration: "15"
+win22cis_lockoutduration: 0
 
 # 1.2.2
 # win22cis_lockoutbadcount is the number of failed login attempts before locking account
 # This value should be set to 5 or fewer, but not 0, to be CIS compliant
-win22cis_lockoutbadcount: 5
+win22cis_lockoutbadcount: 0
 
 # 1.2.3
 # win22cis_resetlockoutcount is the amount of time in minutes before a reset after an account lockout
@@ -64,7 +64,7 @@ win22cis_machine_acct_pw_age: 30
 # 2.3.7.3
 # win22cis_inactivity_timeout is the timeout in seconds for how long to wait for activity
 # This value should be 900 or vewer, but not zero, to be CIS compliant
-win22cis_inactivity_timeout: 900
+win22cis_inactivity_timeout: 0
 
 
 # 2.3.7.4
@@ -80,8 +80,8 @@ win22cis_cached_logons_count: 4
 
 # 2.3.7.7
 # win22cis_passwd_expiry_warn is the number of days before an expring password users will receive warnings about the expring password
-# This needs to be between 4 adn 14 days to be CIS compliant
-win22cis_passwd_expiry_warn: 14
+# This needs to be between 5 and 14 days to be CIS compliant
+win22cis_passwd_expiry_warn: 5
 
 # 2.3.7.9
 # win22cis_smartc_remove_option is the reg key option on the action when a SmartCard is removed
@@ -98,32 +98,32 @@ win22cis_auto_disconnect: 15
 # 9.1.5
 # domain_firewall_log_path is the path to the domain firewall log files. The control suggests %SystemRoot%\System32\logfiles\firewall\domainfw.log
 # This is a variable to give some leway on where to store these log files
-win22cis_domain_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\domainfw.log'
+win22cis_domain_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\pfirewall.log'
 
 # 9.1.6
 # domain_firewall_log_size is the size of the log file generated
 # To conform to CIS standards the value should be 16,384 or greater. Value is in KB
-win22cis_domain_firewall_log_size: 16,384
+win22cis_domain_firewall_log_size: 4,096
 
 # 9.2.5
 # private_firewall_log_path is the path to the private firewall log files. The control suggests %SystemRoot%\System32\logfiles\firewall\privatefw.log
 # This is a variable to give some leway on where to store these log files
-win22cis_private_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\privatefw.log'
+win22cis_private_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\pfirewall.log'
 
 # 9.2.6
 # private_firewall_log_size is the size of the log file
 # To conform to CIS stadnards the value should be 16,384 or greater. Value is in KB
-win22cis_private_firewall_log_size: 16,384
+win22cis_private_firewall_log_size: 4,096
 
 # 9.3.7
 # public_firewall_log_path is the path to the public firewall log file. The control suggests %SystemRoot%\System32\logfiles\firewall\publicfw.log
 # This is a variable to give some leway on where to store these log files
-win22cis_public_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\publicfw.log'
+win22cis_public_firewall_log_path: '%SystemRoot%\System32\logfiles\firewall\pfirewall.log'
 
 # 9.3.8
 # public_firewall_log_size is the size of the log file
 # To conform to CIS stadnards the value should be 16,384 or greater. Value is in KB
-win22cis_public_firewall_log_size: 16,384
+win22cis_public_firewall_log_size: 4,096
 ####################################
 # Section 18 Variables
 
